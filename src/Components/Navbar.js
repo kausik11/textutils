@@ -6,8 +6,7 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Link, NavLink } from 'react-router-dom';
-import home from './TextForm'
-import about from './About'
+
 
 const NavbarComp = (props) => {
   return (

@@ -5,7 +5,7 @@ import About from './Components/About';
 import Navbar from './Components/Navbar';
 import TextForm from './Components/TextForm';
 import Alert from './Components/Alert';
-import { BrowserRouter as Router, Switch, Route, Routes} from 'react-router-dom'
+import { Route, Routes} from 'react-router-dom'
 
 function App() {
 
@@ -47,12 +47,11 @@ const green = ()=>{
 
   <Navbar title="TextUtils"  mode ={darkmode} toggle={toggleMode} text={text}/> 
   <Alert alert={alertMsg}/>
-  <div className='rout'>
   <Routes>
     <Route path="/" element={<TextForm  mode ={darkmode}  btn={setalaert}/>}/>
     <Route path='/about' element={<About />}/>
   </Routes>
-  </div>
+  
   </>
   );
 }

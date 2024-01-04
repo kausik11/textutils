@@ -25,19 +25,19 @@ export default function TextForm(props) {
     
       <div style={{margin:'5px 60px', backgroundColor:'#F0FFFF', padding:'5px', width:'90vw', borderRadius:'5px'}}>
 
-      <button className='btn btn-primary mx-2'onClick={()=>{
+      <button disabled={text.length === 0} className='btn btn-primary mx-2'onClick={()=>{
         let newText = text.toUpperCase();
         settext(newText);
         props.btn("converted to Uppercase","primary");
       }}>Convert Uppercase</button>
 
-     <button className='btn btn-primary mx-2'onClick={()=>{
+     <button disabled={text.length === 0} className='btn btn-primary mx-2'onClick={()=>{
         let newText = text.toLowerCase();
         settext(newText);
         props.btn("Converted to Lowercase","primary");
       }}>Convert LowerCase </button>
 
-      <button className='btn btn-primary'onClick={()=>{
+      <button disabled={text.length === 0} className='btn btn-primary'onClick={()=>{
         let newText = "Prepared by kausik";
         settext(newText);
         props.btn("Text clear","danger");
@@ -45,13 +45,13 @@ export default function TextForm(props) {
 
 
 
-<button className='btn btn-primary mx-2'onClick={()=>{
+<button disabled={text.length === 0} className='btn btn-primary mx-2'onClick={()=>{
         let newText = text.replace(/ +/g, " ");
         settext(newText);
         props.btn("extra space is cleared","primary");
       }}>remove spaces</button>
 
-<button className='btn btn-primary mx-1'onClick={()=>{
+<button disabled={text.length === 0} className='btn btn-primary mx-1'onClick={()=>{
       // console.log("copied")
        let newText = text;
        navigator.clipboard.writeText(newText);
