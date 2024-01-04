@@ -6,6 +6,9 @@
   height: 40vmin;
   pointer-events: none;
 }
+.heading{
+  text-align: center;
+}
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
@@ -34,6 +37,16 @@
 .container{
   display: flex;
   gap: 50px;
+}
+.secound{
+  width: 650px;
+  height: 150px;
+  overflow-x:auto ;
+  background-color: aliceblue;
+  margin: 10px;
+  border-radius: 5px;
+  border: 1px solid black;
+  padding: 5px;
 }
 
 @keyframes App-logo-spin {
