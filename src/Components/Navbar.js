@@ -8,7 +8,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 const NavbarComp = (props) => {
   return (
-    <Navbar expand="lg" className="bg-body-tertiary">
+    <Navbar expand="lg" bg="dark" data-bs-theme="dark">
       <Container fluid>
         <Navbar.Brand href="#">{props.title}</Navbar.Brand>
         <Navbar.Toggle aria-controls="navbarScroll" />
