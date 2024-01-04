@@ -5,25 +5,31 @@ import { useState } from 'react';
 
 const Alert1 = (props) => {
     const [show, setShow] = useState(true);
+
+    const capitalize = (word)=>{
+         const lower  = word.toLowerCase()
+         return lower.charAt(0).toUpperCase() + lower.slice(1);
+       
+    }
     
     //  let mystyle = {
     //     .Heading
     //  }
 
   return (
-    <>
-    <Alert show={show} variant="warning">
-        <Alert>{props.alert}</Alert>
-        <p>
+    props.alert && <>
+    <Alert show={show} variant={props.alert.type}>
+        <Alert>{capitalize(props.alert.message)}</Alert>
+        {/* <p>
           Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget
           lacinia odio sem nec elit. Cras mattis consectetur purus sit amet
           fermentum.
-        </p>
+        </p> */}
         <hr />
         <div className="d-flex justify-content-end">
-          <Button onClick={() => setShow(false)} variant="outline-success">
+          {/* <Button onClick={() => setShow(false)} variant="outline-success">
             Close me
-          </Button>
+          </Button> */}
         </div>
       </Alert>
 

@@ -28,16 +28,19 @@ export default function TextForm(props) {
       <button className='btn btn-primary mx-2'onClick={()=>{
         let newText = text.toUpperCase();
         settext(newText);
+        props.btn("converted to Uppercase","primary");
       }}>Convert Uppercase</button>
 
      <button className='btn btn-primary mx-2'onClick={()=>{
         let newText = text.toLowerCase();
         settext(newText);
+        props.btn("Converted to Lowercase","primary");
       }}>Convert LowerCase </button>
 
       <button className='btn btn-primary'onClick={()=>{
         let newText = "Prepared by kausik";
         settext(newText);
+        props.btn("Text clear","danger");
       }}>Clear text</button>
 
 
@@ -45,6 +48,7 @@ export default function TextForm(props) {
 <button className='btn btn-primary mx-2'onClick={()=>{
         let newText = text.replace(/ +/g, " ");
         settext(newText);
+        props.btn("extra space is cleared","primary");
       }}>remove spaces</button>
 
 <button className='btn btn-primary mx-1'onClick={()=>{

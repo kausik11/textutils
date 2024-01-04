@@ -5,6 +5,9 @@ import Form from 'react-bootstrap/Form';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import { Link, NavLink } from 'react-router-dom';
+import home from './TextForm'
+import about from './About'
 
 const NavbarComp = (props) => {
   return (
@@ -18,14 +21,15 @@ const NavbarComp = (props) => {
             style={{ maxHeight: '100px' }}
             navbarScroll
           >
-            <Nav.Link href="#action1">Home</Nav.Link>
-            <Nav.Link href="#action2">Link</Nav.Link>
-            <Nav.Link href="#action2">About</Nav.Link>
-          </Nav>
+            <Link to='/' style={{margin:"10px"}}>Home</Link>
+            <Link to='/about' style={{margin:"10px"}}>About</Link>
+          
+          </Nav> 
           <Form className="d-flex">
+          <Button variant="success" className='mx-2'>Success</Button>
           <div className={`form-check form-switch text-${props.mode==="light" ? "dark" : "light"}`}>
-  <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked" onClick={props.toggle} />
-  <label class="form-check-label" htmlFor="flexSwitchCheckChecked">{props.text}</label>
+  <input className="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked" onClick={props.toggle} />
+  <label className="form-check-label" htmlFor="flexSwitchCheckChecked">{props.text}</label>
 </div>
             {/* <Form.Control
               type="search"
