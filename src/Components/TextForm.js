@@ -23,7 +23,7 @@ export default function TextForm(props) {
           onChange={ChangeHandeler}
         />
     
-      <div style={{margin:'auto',marginTop:'5px', backgroundColor:'#F0FFFF', padding:'5px', width:'90vw', borderRadius:'5px'}}>
+      <div style={{margin:'5px 60px', backgroundColor:'#F0FFFF', padding:'5px', width:'90vw', borderRadius:'5px'}}>
 
       <button className='btn btn-primary mx-2'onClick={()=>{
         let newText = text.toUpperCase();

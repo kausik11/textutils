@@ -4,6 +4,7 @@ import './App.css';
 import About from './Components/About';
 import Navbar from './Components/Navbar';
 import TextForm from './Components/TextForm';
+import Alert from './Components/Alert';
 
 function App() {
 
@@ -23,6 +24,7 @@ const toggleMode = ()=>{
   return (
   <>
   <Navbar title="TextUtils"  mode ={darkmode} toggle={toggleMode} text={text}/> 
+  <Alert alert="This is alert" />
   <TextForm  mode ={darkmode}/>
   {/* <About /> */}
   </>
